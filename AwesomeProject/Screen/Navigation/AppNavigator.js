@@ -20,7 +20,7 @@ const AppNavigator = () => {
           <Stack.Screen name='Onboardingscreen2' component={Onboardingscreen2}/>
           <Stack.Screen name='OnboardingScreen3' component={OnboardingScreen3}/>
           <Stack.Screen name='Home' component={Home}/>
-          <Stack.Screen name="Home" component={HomeMain} />
+          <Stack.Screen name="HomeMain" component={HomeMain} />
         <Stack.Screen name="CurrentLocation" component={CurrentLocation}/>
           
       

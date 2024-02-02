@@ -16,10 +16,11 @@ const HomeMain = () => {
       useNativeDriver: true,
     }).start(() => {
       setTimeout(() => {
-        navigation.navigate('CurrentLocation', {
-          latitude : 24.860966,
-          longitude :  66.990501,
-        });
+        navigation.navigate('Onboardingscreen1');
+        // navigation.navigate('Home', {
+        //   latitude : 24.860966,
+        //   longitude :  66.990501,
+        // });
        
       }, 2000); 
     });

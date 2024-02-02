@@ -2,13 +2,18 @@ import { View, Text, TouchableOpacity, StyleSheet , Image, ScrollView} from 'rea
 import React from 'react'
 import Svg, { Image as SvgImage } from 'react-native-svg';
 import Slider from '../Components/Slider'
+import { useNavigation } from "@react-navigation/native";
 
 export default function Home() {
+  const navigation = useNavigation();
   return (
     <ScrollView style={styles.container}>
       
       <TouchableOpacity style={styles.SwapStationbtn}>
-        <Text style={styles.txt}>Find Swap Station</Text>
+        <Text style={styles.txt} onPress={() => navigation.navigate("CurrentLocation" , {
+          latitude : 24.860966,
+          longitude :  66.990501,
+         })} >Find Swap Station</Text>
       </TouchableOpacity>
       <Slider/>
       <View style={styles.batterylevel}>
