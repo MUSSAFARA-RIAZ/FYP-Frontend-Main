@@ -12,6 +12,7 @@ import CurrentLocation from '../Screens/CurrentLocation';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
+  // Aminah code merged
     return ( 
     <NavigationContainer>
         <Stack.Navigator initialRouteName="HomeMain">
