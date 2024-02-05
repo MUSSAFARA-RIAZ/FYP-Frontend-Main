@@ -9,6 +9,8 @@ import OnboardingScreen3 from '../Screens/OnboardingScreen3';
 import Home from '../Screens/Home';
 import HomeMain from '../Screens/HomeMain';
 import CurrentLocation from '../Screens/CurrentLocation';
+import HowItWork from '../Screens/HowItWork';
+import UserProfile from '../Screens/UserProfile';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
@@ -22,6 +24,8 @@ const AppNavigator = () => {
           <Stack.Screen name='Home' component={Home}/>
           <Stack.Screen name="HomeMain" component={HomeMain} />
         <Stack.Screen name="CurrentLocation" component={CurrentLocation}/>
+        <Stack.Screen name='HowItworks' component={HowItWork}/>
+        <Stack.Screen name='UserProfile' component={UserProfile}/>
           
       
         </Stack.Navigator>
