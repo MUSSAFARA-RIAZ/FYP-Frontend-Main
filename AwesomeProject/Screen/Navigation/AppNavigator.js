@@ -14,6 +14,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import OTPscreen1 from '../Screens/OTPscreen1';
 import OTPscreen2 from '../Screens/OTPscreen2';
 import TurnOnLocationScreen from '../Screens/TurnOnLocationScreen';
+import SwapStationDetails from '../Screens/SwapStationDetails';
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   // Aminah code merged
@@ -25,6 +26,7 @@ const AppNavigator = () => {
           <Stack.Screen name="OTPscreen1" component={OTPscreen1} />
           <Stack.Screen name="OTPscreen2" component={OTPscreen2}/> 
           <Stack.Screen name='TurnOnLocationScreen' component={TurnOnLocationScreen}/>
+          <Stack.Screen name='SwapStationDetails' component={SwapStationDetails}/>
           
 
         </Stack.Navigator>
