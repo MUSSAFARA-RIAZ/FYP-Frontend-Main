@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TextInput, Image } from "react-native";
+import { View, Text, StyleSheet, TextInput, Image, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import Button from "../Components/Button";
 
@@ -37,14 +37,11 @@ export default function TurnOnLocationScreen() {
           volutpat elit ut quam
         </Text>
       </View>
-      <Button
-        title="Next"
-        onPress={() => navigation.navigate("TurnOnLocationScreen")}
-      />
-      <Button
-        title="Next"
-        onPress={() => navigation.navigate("TurnOnLocationScreen")}
-      />
+      <Button title="Turn_On"/>
+      <TouchableOpacity style={styles.button} >
+    <Text style={styles.buttonText}>Skip</Text>
+  </TouchableOpacity>
+     
     
     </View>
   );
@@ -52,7 +49,7 @@ export default function TurnOnLocationScreen() {
 const styles = StyleSheet.create({
   imgTurnOn: {
     width: Dimensions.get("screen").width - 40,
-    height: 350,
+    height: 300,
   },
   container: {
     height: 200,
@@ -93,26 +90,41 @@ const styles = StyleSheet.create({
   },
 
   textview: {
-    marginVertical: 130,
-    borderColor: "red",
-    borderWidth: 3,
-    padding: 20,
+    marginVertical: 97,
+  
+    // padding: 20,
   },
   txt: {
     color: "white",
     fontSize: 26,
     fontWeight: "bold",
     textAlign: "center",
+    lineHeight: 90,
   },
   txt1: {
     fontSize: 16,
     color: "white",
     textAlign: "center",
-    lineHeight: 20,
+    lineHeight: 25,
   },
   blackareaview: {
     width: "100%",
     height: "100%",
     backgroundColor: "black",
+  },
+  button: {
+    backgroundColor: 'black',
+    paddingVertical: 10,
+    paddingHorizontal: 120, // Adjusted padding to make the button smaller
+    borderRadius: 10,
+    marginBottom: 20,
+    borderColor:"#37C6F5",
+    borderWidth:1,
+    marginBottom:20, // Adjusted margin to reduce space at the bottom
+  },
+  buttonText: {
+    color: 'white',
+    fontSize: 18,
+    textAlign:"center",
   },
 });

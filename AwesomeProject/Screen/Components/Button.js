@@ -11,13 +11,14 @@ const styles = StyleSheet.create({
     button: {
         backgroundColor: '#37C6F5',
         paddingVertical: 10,
-        paddingHorizontal: 150, // Adjusted padding to make the button smaller
+        paddingHorizontal: 120, // Adjusted padding to make the button smaller
         borderRadius: 10,
         marginBottom: 20, // Adjusted margin to reduce space at the bottom
       },
       buttonText: {
         color: 'white',
         fontSize: 18,
+        textAlign:"center",
       },
 
 
