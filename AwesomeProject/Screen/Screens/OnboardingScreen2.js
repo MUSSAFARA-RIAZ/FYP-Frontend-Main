@@ -1,5 +1,6 @@
 import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Button from "../Components/Button";
 
 const Onboardingscreen2 = () => {
   const navigation = useNavigation();
@@ -10,9 +11,10 @@ const Onboardingscreen2 = () => {
         <Text style={styles.txt}>Real Time E- Bike Health Monitoring !</Text>
         <Text style={styles.txt1}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce volutpat elit ut quam</Text>
       </View>
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("OnboardingScreen3")}>
+      {/* <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("OnboardingScreen3")}>
         <Text style={styles.buttonText}>Next</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+      <Button title="Next"  onPress={() => navigation.navigate("OnboardingScreen3")} />
     </View>
   );
 }
