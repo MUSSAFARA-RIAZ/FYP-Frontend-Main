@@ -4,65 +4,130 @@ import {
   Text,
   Image,
   StyleSheet,
-  Button,
+  Alert,
   TouchableOpacity,
 } from "react-native";
-
+import Button from "../Components/Button";
 export default function SwapStationDetails() {
+  const handleSwapRequest = () => {
+    Alert.alert(
+      "Swap Request",
+      "Are you sure you want to make a swap request?",
+      [
+        {
+          text: "No",
+          style: "cancel",
+        },
+        {
+          text: "Yes",
+          onPress: () => {
+            // Logic to handle when the user clicks Yes
+            // For example, you can hide the message box here
+          },
+        },
+      ],
+      { cancelable: true }
+    );
+  };
+
   return (
     <View>
-      <View style={styles.container}>
-        <View style={styles.row}>
-          <Image
-            source={require("../../assets/Images/ProfileIcon.png")}
-            style={styles.image}
-          />
-          <View style={styles.column}>
-            <Text style={styles.ownerName}>Battery Owner Name</Text>
-            <Text style={styles.batteryRemaining}>Remaining Batteries: 9</Text>
-          </View>
-          <Text style={styles.price}>Rs. 45000</Text>
-        </View>
-        <View style={styles.centeredView}>
-          <Text style={styles.txt}>Address</Text>
-          <Text style={styles.desc}>
-            456 Renewable Street, Eco Valley District, ville 67 Land, Country
-          </Text>
-          <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Image source={require("../../assets/Images/clockicon.png")} />
-            <Text style={styles.txt}>5 mins away</Text>
-          </View>
-        </View>
-      </View>
-      <View style={styles.bottomView}>
-        <Text>kks</Text>
-        <View
+  <View
   style={{
-    borderWidth: 2,
-    flex: 1,
+    borderWidth: 4,
     borderColor: "blue",
+    display: "flex",
     flexDirection: "row",
+    paddingHorizontal: 4,
+    paddingVertical: 10,
   }}
 >
-  <TouchableOpacity style={[styles.button, { flex: 2 }]}>
-    <Text style={{ color: "white" }}>Make swap request</Text>
-  </TouchableOpacity>
-
-  <TouchableOpacity style={[styles.button, { flex: 1 }]}>
-    <Image
-      source={require("../../assets/Images/msgicon.png")} // replace with your actual image
-      //style={{ width: "100%", height: "100%", resizeMode: "contain" }}
-    />
-  </TouchableOpacity>
-  <TouchableOpacity style={[styles.button, { flex: 1 }]}>
-    <Image
-      source={require("../../assets/Images/callicon.png")} // replace with your actual image
-      // style={{ width: "100%", height: "100%", resizeMode: "contain" }}
-    />
-  </TouchableOpacity>
+  <View style={{ borderWidth: 2, borderColor: "black", flex: 1 }}>
+    <Text style={{ fontSize: 18, fontWeight: "bold", lineHeight: 20 }}>Swap Station Namesss</Text>
+    <Text style={{ lineHeight: 25 }}>
+      456 Renewable Street, Eco Valley District, ville 67 Land, Country
+    </Text>
+  </View>
+  <View
+    style={{
+      borderWidth: 2,
+      flexDirection: "row",
+      borderColor: "black",
+      backgroundColor: "rgba(55, 198, 245, 1)",
+      alignItems: "flex-start",
+    }}
+  >
+    <Image source={require("../../assets/Images/clockicon.png")} />
+    <Text>5 mins away</Text>
+  </View>
 </View>
 
+
+      <View style={styles.bottomView}>
+        <View
+          style={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            width: "90%",
+            marginHorizontal: "auto",
+            paddingHorizontal: "10%",
+          }}
+        ></View>
       </View>
+      <View
+        style={{
+          borderWidth: 2,
+          borderColor: "black",
+          backgroundColor: "black",
+          color: "white",
+          marginLeft: 10,
+          marginRight: 10,
+          padding: 8,
+          borderRadius: 10,
+        }}
+      >
+        <Text style={{ color: "white" }}>About Swap Station</Text>
+        <View style={styles.rowContainer}>
+          <View>
+            <Image
+              source={require("../../assets/Images/batteryimg1.png")}
+              style={styles.batteryimage}
+              resizeMode="cover"
+            />
+          </View>
+          <View>
+            <Image
+              source={require("../../assets/Images/batteryimg2.png")}
+              style={styles.batteryimage}
+              resizeMode="cover"
+            />
+          </View>
+          <View>
+            <Image
+              source={require("../../assets/Images/batteryimg3.png")}
+              style={styles.batteryimage}
+              resizeMode="cover"
+            />
+          </View>
+        </View>
+        <Text style={{ color: "white" }}>
+          Celebrate sustainability with us at EcoSwap Station! 🌱 We're
+          dedicated to revolutionizing your e-bike experience by offering
+          convenient battery swapping services. Our state-of-the-art facility is
+          equipped with cutting-edge technology, ensuring seamless battery
+          exchanges for your electric rides
+        </Text>
+
+        <TouchableOpacity style={styles.button} onPress={handleSwapRequest}>
+          <Text style={styles.text}>
+            Call Us <Image source={require("../../assets/Images/call.png")} />
+          </Text>
+        </TouchableOpacity>
+
+        <View></View>
+      </View>
+      <Button title="Swap Request" onPress={handleSwapRequest} />
     </View>
   );
 }
@@ -117,17 +182,32 @@ const styles = StyleSheet.create({
     // fontWeight:'bold',
   },
   button: {
-    flex: 1,
+    // flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "blue",
-    borderWidth: 2,
-    borderColor: "blue",
+    backgroundColor: "#37C6F5",
+
     margin: 5,
     borderRadius: 5,
+    height: 35,
+
+    width: 120,
+  },
+  iconstyling: {
+    borderWidth: 2,
+    borderColor: "#37C6F5",
+    margin: 10,
   },
   text: {
     color: "white",
     fontSize: 16,
+  },
+  rowContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  batteryimage: {
+    margin: 5,
   },
 });
