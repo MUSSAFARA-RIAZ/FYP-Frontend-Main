@@ -20,10 +20,7 @@ export default function SwapStationDetails() {
         },
         {
           text: "Yes",
-          onPress: () => {
-            // Logic to handle when the user clicks Yes
-            // For example, you can hide the message box here
-          },
+          onPress: () => {},
         },
       ],
       { cancelable: true }
@@ -32,60 +29,72 @@ export default function SwapStationDetails() {
 
   return (
     <View>
-  <View
-  style={{
-    borderWidth: 4,
-    borderColor: "blue",
-    display: "flex",
-    flexDirection: "row",
-    paddingHorizontal: 4,
-    paddingVertical: 10,
-  }}
->
-  <View style={{ borderWidth: 2, borderColor: "black", flex: 1 }}>
-    <Text style={{ fontSize: 18, fontWeight: "bold", lineHeight: 20 }}>Swap Station Namesss</Text>
-    <Text style={{ lineHeight: 25 }}>
-      456 Renewable Street, Eco Valley District, ville 67 Land, Country
-    </Text>
-  </View>
-  <View
-    style={{
-      borderWidth: 2,
-      flexDirection: "row",
-      borderColor: "black",
-      backgroundColor: "rgba(55, 198, 245, 1)",
-      alignItems: "flex-start",
-    }}
-  >
-    <Image source={require("../../assets/Images/clockicon.png")} />
-    <Text>5 mins away</Text>
-  </View>
-</View>
-
-
-      <View style={styles.bottomView}>
+      <View style={styles.parentdiv}>
+        <View style={{ flex: 1 }}>
+          <Text style={{ fontSize: 18, fontWeight: "bold", lineHeight: 20 }}>
+            Swap Station Name
+          </Text>
+          <Text style={{ lineHeight: 25 }}>
+            456 Renewable Street, Eco Valley District, ville 67 Land, Country
+          </Text>
+        </View>
         <View
           style={{
+           // borderWidth: 2,
             flexDirection: "row",
-            justifyContent: "space-between",
+           
+            backgroundColor: "rgba(55, 198, 245, 1)",
             alignItems: "center",
-            width: "90%",
-            marginHorizontal: "auto",
-            paddingHorizontal: "10%",
+            height:40,
+            borderRadius:10,
+            padding:10
           }}
-        ></View>
+        >
+          <Image style={{color:"black"}} source={require("../../assets/Images/clock.png")} />
+          <Text>5 mins away</Text>
+        </View>
       </View>
+     
+      <View style={styles.wrapper}>
+        <View style={styles.wrapper1}>
+          <Image
+            source={require("../../assets/Images/SwapStation_Battery.png")}
+          />
+        </View>
+        <View style={styles.wrapper2}>
+          <View style={styles.wrapper2view}>
+            <Image source={require("../../assets/Images/batteryvector.png")} />
+
+            <Text > Batteries Available </Text>
+          </View>
+          <View>
+            <Text>5</Text>
+            <View style={styles.line} />
+          </View>
+          <View style={styles.wrapper2view}>
+            <Image source={require("../../assets/Images/batteryvector.png")} />
+
+            <Text > Power Level </Text>
+          </View>
+          <View>
+            <Text>100 KW</Text>
+            <View style={styles.line} />
+          </View>
+          <View style={styles.wrapper2view}>
+            <Image source={require("../../assets/Images/bill.png")} />
+           
+            <Text> Price per Battery </Text>
+          </View>
+          <View>
+            <Text>RS 35000</Text>
+            <View style={styles.line} />
+          </View>
+        </View>
+      </View>
+
+  
       <View
-        style={{
-          borderWidth: 2,
-          borderColor: "black",
-          backgroundColor: "black",
-          color: "white",
-          marginLeft: 10,
-          marginRight: 10,
-          padding: 8,
-          borderRadius: 10,
-        }}
+        style={styles.aboutswapstationview}
       >
         <Text style={{ color: "white" }}>About Swap Station</Text>
         <View style={styles.rowContainer}>
@@ -125,14 +134,41 @@ export default function SwapStationDetails() {
           </Text>
         </TouchableOpacity>
 
-        <View></View>
+       
       </View>
-      <Button title="Swap Request" onPress={handleSwapRequest} />
+      <Button  title="Swap Request" onPress={handleSwapRequest} />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  parentdiv: {
+    display: "flex",
+    flexDirection: "row",
+  //  justifyContent: "space-between", // Aligns items at the opposite ends horizontally
+    paddingHorizontal: 10,
+    paddingVertical: 10,
+  },
+  
+  line: {
+    borderColor: "black",
+    borderWidth: 1,
+    marginVertical: 0,
+  },
+  wrapper: {
+    flexDirection: "row",
+    
+
+    padding:10
+  },
+  wrapper2:{
+    padding:10,
+  
+  },
+  wrapper2view:{
+    flexDirection: "row", alignItems: "center", marginBottom:10
+  },
+
   container: {
     justifyContent: "center",
     alignItems: "center",
@@ -143,7 +179,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    marginBottom: 20, // Add margin bottom to create space for the centered view
+    marginBottom: 20, 
   },
   column: {
     marginLeft: 20, // Add margin between columns
@@ -170,9 +206,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 10,
   },
-  bottomView: {
-    marginTop: 130, // Adjust marginTop to position "kks" text below centered view
-  },
+  
   txt: {
     lineHeight: 30,
     fontWeight: "bold",
@@ -210,4 +244,15 @@ const styles = StyleSheet.create({
   batteryimage: {
     margin: 5,
   },
+  aboutswapstationview:{
+    borderWidth: 2,
+  
+    backgroundColor: "black",
+    color: "white",
+    marginLeft: 10,
+    marginRight: 10,
+    marginBottom:14,
+    padding: 10,
+    borderRadius: 10,
+  }
 });

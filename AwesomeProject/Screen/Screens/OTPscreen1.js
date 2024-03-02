@@ -1,12 +1,13 @@
 import React, { useState, useRef, forwardRef, useImperativeHandle } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet} from 'react-native';
+import Button from '../Components/Button';
 import PhoneInput from 'react-native-phone-input';
 import CountryPicker from 'react-native-country-picker-modal';
 import { useNavigation } from "@react-navigation/native";
 
 const OTPscreen1 = forwardRef((props, ref) => {
   const navigation = useNavigation();
-    const [cca2, setCCA2] = useState('pk'); // Set default country to Pakistan
+    const [cca2, setCCA2] = useState('pk'); 
     const [phoneInputValue, setPhoneInputValue] = useState('');
     const countryPickerRef = useRef(null);
     const phoneRef = useRef(null);

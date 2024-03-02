@@ -79,6 +79,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    borderWidth:2,
+  //  borderColor:"white",
+  marginBottom:20
   },
   otptextview: {
     marginTop: 20,
@@ -97,7 +100,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 40,
+    marginTop: 30,
   },
   indicatorhighlight1: {
     backgroundColor: "lightgray",

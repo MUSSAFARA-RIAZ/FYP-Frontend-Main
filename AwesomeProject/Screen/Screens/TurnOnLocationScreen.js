@@ -115,12 +115,13 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: 'black',
     paddingVertical: 10,
-    paddingHorizontal: 120, // Adjusted padding to make the button smaller
+    marginTop:10,
+   
     borderRadius: 10,
     marginBottom: 20,
     borderColor:"#37C6F5",
     borderWidth:1,
-    marginBottom:20, // Adjusted margin to reduce space at the bottom
+
   },
   buttonText: {
     color: 'white',
