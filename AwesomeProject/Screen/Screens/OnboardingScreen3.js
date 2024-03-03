@@ -13,7 +13,7 @@ const OnboardingScreen3 = () => {
       <View style={styles.container}></View>
       <View style={styles.register_loginbtn}>
       <TouchableOpacity style={styles.button}>
-        <Text style={styles.btntxt} onPress={() => navigation.navigate("HowItworks")}>Register</Text>
+        <Text style={styles.btntxt} onPress={() => navigation.navigate("OTPscreen1")}>Register</Text>
       </TouchableOpacity>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Home")}>
         <Text style={styles.btntxt}>Login</Text>

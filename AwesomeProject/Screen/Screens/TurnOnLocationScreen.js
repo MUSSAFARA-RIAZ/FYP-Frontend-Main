@@ -39,7 +39,7 @@ export default function TurnOnLocationScreen() {
       </View>
       <Button title="Turn_On"/>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("SwapStationDetails")}>
-    <Text style={styles.buttonText} >Skip</Text>
+    <Text style={styles.buttonText} onPress={()=>navigation.navigate("Home")} >Skip</Text>
   </TouchableOpacity>
      
     
